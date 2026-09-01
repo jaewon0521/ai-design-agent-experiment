@@ -1,0 +1,6 @@
+{
+  "disposition": "establish-local-tokens",
+  "reason": "Root DESIGN.md is absent. Autopilot compiler helpers (autopilot-mission.cjs, design-md) are not installed in this project. Tokens are locked in app/globals.css with D-ids. DESIGN.md is not hand-written.",
+  "surface_genre": "hairline-rule-bands",
+  "presets": ["P-DB-01", "P-DB-04", "P-DB-05", "P-DB-06", "P-DB-07", "P-PR-43", "P-PR-46", "P-FL-05-ops"]
+}
