@@ -168,7 +168,6 @@ Score:
 | Baseline           |         |            |                 |     |             |
 | UI UX Pro Max      |         |            |                 |     |             |
 | Oh My Design       |         |            |                 |     |             |
-| Frontend Design    |         |            |                 |     |             |
 | Agency UI Designer |         |            |                 |     |             |
 
 ---
