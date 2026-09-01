@@ -20,6 +20,5 @@
 - Next.js
 - TypeScript
 - Tailwind CSS
-- shadcn/ui
 
 별도의 디자인 파일이나 기존 디자인 시스템은 없다.
