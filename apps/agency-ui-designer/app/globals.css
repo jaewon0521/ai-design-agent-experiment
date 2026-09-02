@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ds-canvas: #f1f5f9;
+  --ds-surface: #ffffff;
+  --ds-surface-muted: #f8fafc;
+  --ds-ink: #0f172a;
+  --ds-ink-muted: #334155;
+  --ds-ink-subtle: #475569;
+  --ds-line: #e2e8f0;
+  --ds-brand: #1d4ed8;
+  --ds-brand-hover: #1e40af;
+  --ds-brand-subtle: #dbeafe;
+  --ds-brand-ink: #ffffff;
+  --ds-success: #047857;
+  --ds-success-subtle: #d1fae5;
+  --ds-warning: #b45309;
+  --ds-warning-subtle: #fef3c7;
+  --ds-danger: #b91c1c;
+  --ds-danger-subtle: #fee2e2;
+  --ds-info: #1d4ed8;
+  --ds-info-subtle: #dbeafe;
+  --ds-away: #334155;
+  --ds-away-subtle: #e2e8f0;
+  --ds-shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+  --ds-shadow-md: 0 8px 16px -8px rgb(15 23 42 / 0.16);
+  --ds-radius: 0.75rem;
+  --font-family-primary: var(--font-inter), var(--font-noto-sans-kr),
+    "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-family-secondary: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+}
+
+[data-theme="dark"] {
+  --ds-canvas: #0f172a;
+  --ds-surface: #1e293b;
+  --ds-surface-muted: #162033;
+  --ds-ink: #f8fafc;
+  --ds-ink-muted: #cbd5e1;
+  --ds-ink-subtle: #94a3b8;
+  --ds-line: #334155;
+  --ds-brand: #3b82f6;
+  --ds-brand-hover: #60a5fa;
+  --ds-brand-subtle: #1e3a8a;
+  --ds-brand-ink: #0f172a;
+  --ds-success: #34d399;
+  --ds-success-subtle: #064e3b;
+  --ds-warning: #fbbf24;
+  --ds-warning-subtle: #78350f;
+  --ds-danger: #f87171;
+  --ds-danger-subtle: #7f1d1d;
+  --ds-info: #93c5fd;
+  --ds-info-subtle: #1e3a8a;
+  --ds-away: #cbd5e1;
+  --ds-away-subtle: #334155;
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+  --ds-shadow-md: 0 10px 24px -12px rgb(0 0 0 / 0.55);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-family-primary);
+  --font-mono: var(--font-family-secondary);
+  --color-canvas: var(--ds-canvas);
+  --color-surface: var(--ds-surface);
+  --color-surface-muted: var(--ds-surface-muted);
+  --color-ink: var(--ds-ink);
+  --color-ink-muted: var(--ds-ink-muted);
+  --color-ink-subtle: var(--ds-ink-subtle);
+  --color-line: var(--ds-line);
+  --color-brand: var(--ds-brand);
+  --color-brand-hover: var(--ds-brand-hover);
+  --color-brand-subtle: var(--ds-brand-subtle);
+  --color-brand-ink: var(--ds-brand-ink);
+  --color-success: var(--ds-success);
+  --color-success-subtle: var(--ds-success-subtle);
+  --color-warning: var(--ds-warning);
+  --color-warning-subtle: var(--ds-warning-subtle);
+  --color-danger: var(--ds-danger);
+  --color-danger-subtle: var(--ds-danger-subtle);
+  --color-info: var(--ds-info);
+  --color-info-subtle: var(--ds-info-subtle);
+  --color-away: var(--ds-away);
+  --color-away-subtle: var(--ds-away-subtle);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  background: var(--ds-canvas);
+  color: var(--ds-ink);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ds-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
